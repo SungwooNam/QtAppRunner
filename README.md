@@ -2,7 +2,7 @@
 
 Header only class to run QApplication on a separate thread. 
 
-The qTest provides QTEST_MAIN() but it can be specified only once. Hence gtest can't really test various scenarios of UI as there can be only a single point of execution. 
+QTest provides QTEST_MAIN() but it can be specified only once. Hence gtest can't really run various scenarios of UI as there can be only a single point of execution. 
 
 AppRunner is designed to overcome the restriction by running Qt at a dedicated thread. When AppRunner is created, it create a separate thread and execute QApplicaiton.processEvents() in the thread. And it gets user's lambda and executes the lambda function at the thread also. 
 
